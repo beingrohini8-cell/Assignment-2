@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+
+        String original = "Hello World";
+        System.out.println("Original String: " + original);
+
+        // Using StringBuilder to reverse
+        StringBuilder sb = new StringBuilder(original);
+        sb.reverse();
+
+        String reversed = sb.toString();
+        System.out.println("Reversed String: " + reversed);
+    }
+}
