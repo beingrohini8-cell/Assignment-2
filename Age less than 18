@@ -1,0 +1,23 @@
+public class AgeCheck {
+
+    static void checkAge(int age) {
+        
+        if (age < 18) {
+            // Throwing exception manually
+            throw new ArithmeticException("Age is less than 18. Not allowed.");
+        } else {
+            System.out.println("Age is valid. You are allowed.");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            checkAge(16);   // Change value to test
+        } catch (ArithmeticException e) {
+            System.out.println("Exception Caught: " + e.getMessage());
+        }
+
+        System.out.println("Program continues...");
+    }
+}
