@@ -1,0 +1,46 @@
+// Final class (cannot be inherited)
+final class FinalClass {
+    void display() {
+        System.out.println("This is a final class.");
+    }
+}
+
+// Parent class
+class Parent {
+
+    // Final variable (constant)
+    final int number = 100;
+
+    // Final method (cannot be overridden)
+    final void show() {
+        System.out.println("This is a final method.");
+    }
+}
+
+// Child class
+class Child extends Parent {
+
+    // Trying to override final method will give error
+    // void show() { }  ❌ Not allowed
+
+    void display() {
+        System.out.println("Value of final variable: " + number);
+
+        // number = 200; ❌ Not allowed (cannot change final variable)
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+
+        Child obj = new Child();
+        obj.show();      // calling final method
+        obj.display();
+
+        FinalClass fc = new FinalClass();
+        fc.display();
+
+        // class Test extends FinalClass {} ❌ Not allowed
+    }
+}
